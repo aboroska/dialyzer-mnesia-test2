@@ -14,6 +14,7 @@ test() ->
   Options = [{type, set}
             ,{ram_copies, node()}
             ,{attributes, record_info(fields, ?T)}
+            ,{user_properties, []}
             ],
   case mnesia:create_table(?T, Options) of
     {atomic, ok} ->
